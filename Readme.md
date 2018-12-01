@@ -43,3 +43,7 @@ To deploy a specific model file run:
     $ python eval_and_test.py --file keras_mnist.h5
 
 The script will deploy and start a model server, and then evaluate it's accuracy using the entire MNIST test set.
+
+## Cleaning up
+
+Press Ctrl-C at the docker terminal to stop SKIL.  If you used the docker run command above, the --rm flag will clean up all the data once you stop it.
