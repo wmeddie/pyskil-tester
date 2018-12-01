@@ -63,20 +63,6 @@ for i in xrange(10000):
     label = y_test[i]
 
     result = service.predict_single(digit)
-
-    # Using swagger API:
-    #req = skil_client.Prediction(
-    #    id=str(uuid.uuid1()), 
-    #    needs_pre_processing=False,
-    #    prediction=service._indarray(np.expand_dims(digit, 0)))
-
-    #res = skil_server.api.predict(
-    #    req, 
-    #    deployment_name=deployment.name, 
-    #    model_name=service.model_name,
-    #    version_name='default')
-    #result = np.asarray(res.prediction.data).reshape(res.prediction.shape)
-
     predicted = np.argmax(result)
 
     if predicted == label:
